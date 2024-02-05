@@ -34,11 +34,14 @@
             
             <button type="submit" class="rounded-3xl mb-4 bg-yellow-400 w-[150px] bg-opacity-50 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-yellow-600">Connexion</button>
   
-            @if (Route::has('password.request'))
+                  <a class="underline text-sm text-yellow-400 hover:text-yellow-600 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('register') }}">
+                      {{ __('Pas de compte ? Inscrivez-vous') }}
+                  </a>
+            {{-- @if (Route::has('password.request'))
                   <a class="underline text-sm text-yellow-400 hover:text-yellow-600 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
                       {{ __('Mot de passe oublié ?') }}
                   </a>
-            @endif
+            @endif --}}
           </div>
         </form>
       </div>

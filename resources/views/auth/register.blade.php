@@ -43,7 +43,7 @@
             <button type="submit" class="rounded-3xl mb-6 bg-yellow-400 w-[150px] bg-opacity-50 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-yellow-600">Enregistrer</button>
             
             <a class="underline text-sm text-yellow-400 hover:text-yellow-600 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                {{ __('Déjà un compte ?') }}
+                {{ __('Déjà un compte ? se connecter') }}
             </a>
           </div>
         </form>
