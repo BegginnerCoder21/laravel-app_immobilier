@@ -1,8 +1,13 @@
+@extends('layouts.front.site')
+
 <!-- Featured properties start -->
+<!-- Banner start -->
+@include('front.includes.banner')
+<!-- banner end -->
 <div class="featured-properties content-area-7">
     <div class="container-fluid">
         <div class="main-title">
-            <h1>Featured Properties</h1>
+            <h1>Propriétés en vedette</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="row slick-fullwidth wow fadeInUp delay-04s">
@@ -15,7 +20,7 @@
                                 <span class="featured">Featured</span>
                             </div>
                             <div class="tag-for">For Sale</div>
-                            <div class="plan-price"><sup>$</sup>{{$property ->total_price}}</div>
+                            <div class="plan-price">200000 <sup>$</sup></div>
                             <img src="" alt="property-box" class="img-fluid" style="height: 280px;">
                         </a>
                         <div class="property-overlay">
@@ -34,27 +39,31 @@
                             </div>
                         </div>
                     </div>
-                    <div class="detail">
-                        <h1 class="title">
-                            <a href="properties-details.html">Teguera</a>
-                        </h1>
-                        <div class="location">
-                            <a href="properties-details.html">
-                                <i class="flaticon-facebook-placeholder-for-locate-places-on-maps"></i>{{$property ->location}}
-                            </a>
+                    <div class="">
+                        
+                        <div class="detail">
+                            <h1 class="title">
+                                <a href="properties-details.html">Teguera</a>
+                            </h1>
+                            <div class="location">
+                                <a href="properties-details.html">
+                                    <i class="flaticon-facebook-placeholder-for-locate-places-on-maps"></i>Abidjan
+                                </a>
+                            </div>
+                            <ul class="facilities-list clearfix">
+                                <li>
+                                    <i class="flaticon-bed"></i> Chambre
+                                </li>
+                                <li>
+                                    <i class="flaticon-bath"></i>lit
+                                </li>
+                                <li>
+                                    <i class="flaticon-square-layouting-with-black-square-in-east-area"></i> meter
+                                </li>
+                               
+                            </ul>
                         </div>
-                        <ul class="facilities-list clearfix">
-                            <li>
-                                <i class="flaticon-bed"></i> Chambre
-                            </li>
-                            <li>
-                                <i class="flaticon-bath"></i>lit
-                            </li>
-                            <li>
-                                <i class="flaticon-square-layouting-with-black-square-in-east-area"></i> {{$property -> area}}meter
-                            </li>
-                           
-                        </ul>
+                     
                     </div>
                     <div class="footer">
                         <a href="#">
@@ -82,14 +91,14 @@
 <div class="services-3 content-area-20 bg-white">
     <div class="container">
         <div class="main-title">
-            <h1>What Are you Looking For?</h1>
+            <h1>Que recherchez-vous ??</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInLeft delay-04s">
                 <div class="services-info-3">
                     <i class="flaticon-hotel-building"></i>
-                    <h5>Apartments Clean</h5>
+                    <h5>Appartements propres</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
                     <a href="services.html" class="read-more">Read more...</a>
                 </div>
@@ -97,7 +106,7 @@
             <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp delay-04s">
                 <div class="services-info-3">
                     <i class="flaticon-house"></i>
-                    <h5>Houses</h5>
+                    <h5>Maisons</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
                     <a href="services.html" class="read-more">Read more...</a>
                 </div>
@@ -291,7 +300,7 @@
 <div class="most-popular-places content-area-3">
     <div class="container">
         <div class="main-title">
-            <h1>Most Popular Places</h1>
+            <h1>Lieux les plus populaires</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="container">
@@ -322,7 +331,7 @@
 <div class="agent content-area">
     <div class="container">
         <div class="main-title">
-            <h1>Meet Our Agents</h1>
+            <h1>Rencontrez nos agents</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="row">
@@ -401,7 +410,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="main-title">
-                    <h1>Our Testimonial</h1>
+                    <h1>Notre témoignage</h1>
                 </div>
             </div>
         </div>
@@ -436,7 +445,7 @@
                             </a>
                             <div class="media-body align-self-center">
                                 <h5>Karen Paran</h5>
-                                <h6>Support Manager</h6>
+                                <h6>Responsable de l'assistance</h6>
                             </div>
                         </div>
                     </div>
@@ -455,7 +464,7 @@
                                 <h5>
                                     John Pitarshon
                                 </h5>
-                                <h6>Creative Director</h6>
+                                <h6>Directeur de la création</h6>
                             </div>
                         </div>
                     </div>
@@ -489,7 +498,7 @@
 <div class="blog content-area-2">
     <div class="container">
         <div class="main-title">
-            <h1>Latest Blog</h1>
+            <h1>Dernier blog</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="row">
@@ -511,9 +520,9 @@
                     <div class="col-lg-7 col-md-12 col-pad">
                         <div class="detail clearfix">
                             <h3>
-                                <a href="blog-single-sidebar-right.html">Buying a Home</a>
+                                <a href="blog-single-sidebar-right.html">Acheter un logement</a>
                             </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since<span class="d-none2-1200"> the 1500s, when an unknown printer took a galley of type and</span></p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since<span class="d-none2-1200"> dans les années 1500, lorsqu'un imprimeur inconnu prit une galée de caractères et</span></p>
                             <div class="blog-footer clearfix">
                                 <div class="float-left">
                                     <p class="date"><i class="flaticon-calendar"></i> 24 Sep, 2020</p>
@@ -544,7 +553,7 @@
                     <div class="col-lg-7 col-md-12 col-pad">
                         <div class="detail clearfix">
                             <h3>
-                                <a href="blog-single-sidebar-right.html">Selling Your Home</a>
+                                <a href="blog-single-sidebar-right.html">Vendre son logement</a>
                             </h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since<span class="d-none2-1200"> the 1500s, when an unknown printer took a galley of type and</span></p>
                             <div class="blog-footer clearfix">
@@ -569,8 +578,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3>Get Newsletter</h3>
-                <p>Your download should start automatically, if not Click here. Should I give up, huh?.</p>
+                <h3>Recevoir Newsletter</h3>
+                <p>Votre téléchargement devrait démarrer automatiquement, si ce n'est pas le cas Cliquez ici. Dois-je abandonner ??.</p>
                 <div class="form-info">
                     <form action="#" method="GET" enctype="multipart/form-data">
                         <div class="row">
@@ -581,7 +590,7 @@
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-3 col-12">
                                 <div class="send-btn">
-                                    <button type="submit" class="btn btn-color btn-md btn-message">Get it now</button>
+                                    <button type="submit" class="btn btn-color btn-md btn-message">Obtenez-le maintenant</button>
                                 </div>
                             </div>
                         </div>

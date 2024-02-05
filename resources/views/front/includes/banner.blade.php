@@ -3,11 +3,11 @@
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active item-bg">
-                <img class="d-block w-100 h-100" src="" alt="banner">
+                <img class="d-block w-100 h-100" src="{{ asset('assets/front/img/benner/222.jpg') }}" alt="banner">
                 <div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
                     <div class="carousel-content container b1-inner">
                         <div class="tab-search-section">
-                            <h1>Find Your Dream Properties</h1>
+                            <h1>Trouvez la propriété de vos rêves</h1>
                             <div id="typed-strings">
                                 <p>Découvrez les nouveaux biens immobiliers et les biens immobiliers vedettes situés dans votre ville.</p>
                             </div>

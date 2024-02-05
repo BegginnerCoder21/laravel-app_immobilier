@@ -5,7 +5,7 @@
             <div class="col-lg-9 col-md-9 col-sm-7">
                 <div class="list-inline">
                     <a href="tel:1-7X0-555-8X22"><i class="fa fa-phone"></i>+0477 85X6 552</a>
-                    <a href="tel:info@themevessel.com"><i class="fa fa-envelope"></i>info@themevessel.com</a>
+                    <a href="tel:info@themevessel.com"><i class="fa fa-envelope"></i>info@steguera.com</a>
                     <a href="#" class="mr-0"><i class="fa fa-clock-o"></i>Mon - Sun: 8:00am - 6:00pm</a>
                 </div>
             </div>
@@ -14,12 +14,12 @@
                 {{-- @guest() --}}
                     <li>
                   
-                        <a href="{{route('login')}}" class="sign-in"><i class="fa fa-sign-in"></i> Login </a>
+                        <a href="" class="sign-in"><i class="fa fa-sign-in"></i> Login </a>
                        
                     </li>
                    
                     <li>
-                        <a href="{{route('register')}}" class="sign-in"><i class="fa fa-user"></i> Register</a>
+                        <a href="" class="sign-in"><i class="fa fa-user"></i> Register</a>
                     </li>
   
                     {{-- @endguest --}}
