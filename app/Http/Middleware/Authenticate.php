@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request as FacadesRequest;
 
 class Authenticate extends Middleware
 {
@@ -14,7 +15,7 @@ class Authenticate extends Middleware
     {
         //return $request->expectsJson() ? null : route('login');
         if(! $request->expectsJson()){
-            if(Request::is(app()->getLocale() . '/admin*')){
+            if(FacadesRequest::is(app()->getLocale() . '/admin*')){
                 return route('get.admin.login');
             }
             else{
