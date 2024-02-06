@@ -20,10 +20,10 @@
   <div class="menu_section">
     <h3>General</h3>
     <ul class="nav side-menu">
-    <li><a><i class="fa fa-home"></i>{{__('admin/sidebar.categories')}} <span class="fa fa-chevron-down"></span></a>
+    <li><a><i class="fa fa-home"></i> Categories <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="">{{__('admin/sidebar.all categories')}}</a></li>
-                      <li><a href="">{{__('admin/sidebar.add new category')}}</a></li>
+                      <li><a href=""> Toutes les catégories</a></li>
+                      <li><a href="">Ajouter nouvelle catégory</a></li>
                 
                     </ul>
                   </li>
@@ -33,10 +33,10 @@
 
       <ul class="nav side-menu">
         <li>
-          <a><i class="fa fa-home"></i>{{__('admin/sidebar.cities')}} <span class="fa fa-chevron-down"></span></a>
+          <a><i class="fa fa-home"></i>Villes <span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
-                    <li><a href="">{{__('admin/sidebar.all cities')}}</a></li>
-                    <li><a href="">{{__('admin/sidebar.add new cities')}}</a></li>
+                    <li><a href="">Toutes les villes</a></li>
+                    <li><a href="">Ajouter une ville</a></li>
                     
                 </ul>
         </li>
@@ -47,8 +47,8 @@
         <li>
           <a><i class="fa fa-user"></i>Users<span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
-                    <li><a href="">All Users</a></li>
-                    <li><a href="">Create New User</a></li>
+                    <li><a href="">Tous les utilisateurs</a></li>
+                    <li><a href="">Créer un nouvel utilisateur</a></li>
                     
                 </ul>
         </li>
@@ -57,10 +57,10 @@
       
       <ul class="nav side-menu">
         <li>
-          <a><i class="fa fa-home"></i>Properties<span class="fa fa-chevron-down"></span></a>
+          <a><i class="fa fa-home"></i>Propriétés<span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
-                    <li><a href="">All Properties</a></li>
-                    <li><a href="">Create New Property</a></li>
+                    <li><a href="">Toutes les propriétés</a></li>
+                    <li><a href="">Créer une propriété</a></li>
                 </ul>
         </li>
       </ul>
@@ -68,10 +68,10 @@
       
       <ul class="nav side-menu">
         <li>
-          <a><i class="fa fa-user"></i>Sliders<span class="fa fa-chevron-down"></span></a>
+          <a><i class="fa fa-user"></i>glissières<span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
                 
-                    <li><a href="">Create New Slider</a></li>
+                    <li><a href="">Créer un nouveau curseur</a></li>
                     
                 </ul>
         </li>
