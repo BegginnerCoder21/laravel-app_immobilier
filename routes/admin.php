@@ -9,4 +9,5 @@ Route::prefix('admin')->group(function () {
 
     Route::get('/', [AdminController::class, 'index'])->name('admin.dashboard');
     Route::get('/login', [LoginController::class, 'getLogin'])->name('get.admin.login');
+    Route::post('/login',[LoginController::class,'login'])->name('admin.login');
 });
