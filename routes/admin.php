@@ -1,9 +1,11 @@
 <?php
 
-
+use App\Http\Controllers\Admin\AdminController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/admin', function () {
-    return view('dashboard.admin');
+Route::prefix('admin')->group(function () {
+
+    Route::get('/',[AdminController::class,'index'])->name('admin.dashboard');
+    
 });
