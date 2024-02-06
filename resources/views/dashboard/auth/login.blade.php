@@ -34,22 +34,11 @@
               </div>
 
               <div>
-                  <button type="submit" class="btn btn-info btn-lg btn-block"><i class="ft-unlock"></i>Login</button>
+                  <button type="submit" class="btn btn-info btn-lg btn-block"><i class="ft-unlock"></i>Connexion</button>
               </div>
 
-              <div class="clearfix"></div>
 
-              <div class="separator">
-                
-
-                <div class="clearfix"></div>
-                <br />
-
-                <div>
-                  <h1>Ecozone</h1>
-                  <p>©2021 All Rights Reserved. Privacy and Terms</p>
-                </div>
-              </div>
+  
             </form>
           </section>
         </div>

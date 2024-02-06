@@ -1,11 +1,12 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\LoginController;
 use Illuminate\Support\Facades\Route;
 
 
 Route::prefix('admin')->group(function () {
 
-    Route::get('/',[AdminController::class,'index'])->name('admin.dashboard');
-    
+    Route::get('/', [AdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('/login', [LoginController::class, 'getLogin'])->name('get.admin.login');
 });
