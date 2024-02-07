@@ -6,7 +6,7 @@
       <a class="hiddenanchor" id="signup"></a>
       <a class="hiddenanchor" id="signin"></a>
 
-    
+
 
       <div class="login_wrapper">
         <div class="animate form login_form">
@@ -19,18 +19,14 @@
              @include('dashboard.includes.alerts.success')
               <div>
                 <input type="text" class="form-control"  placeholder="Email" name="email"  value="{{old('email')}}" id="email" required="" />
-                @error('email')
-                  <span class="text-danger">message erreur</span>
-                @enderror
+                  <x-input-error :messages="$errors->get('email')" class="mt-2 text-danger" />
               </div>
 
 
               <div>
-                <input type="password" class="form-control"  name="password" 
+                <input type="password" class="form-control"  name="password"
                       id="user-password" placeholder="Password" required="" />
-                  @error('password')
-                    <span class="text-danger">message erreur</span>
-                  @enderror
+                  <x-input-error :messages="$errors->get('password')" class="mt-2 text-danger" />
               </div>
 
               <div>
@@ -38,12 +34,12 @@
               </div>
 
 
-  
+
             </form>
           </section>
         </div>
 
-   
+
       </div>
     </div>
 @endsection
