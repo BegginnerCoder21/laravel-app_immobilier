@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('category_translatins', function (Blueprint $table) {
             $table->id();
+            $table->string('locale')->unique();
+            $table->string('name');
+            $table->foreignIdFor(\App\Models\Category::class);
             $table->timestamps();
         });
     }
