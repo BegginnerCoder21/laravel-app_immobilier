@@ -37,7 +37,7 @@
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Name Of Category <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
-												<input type="text" value="{{$category->name}}" id="name"
+												<input type="text" value="categoryName" id="name"
 												class="form-control"
 												placeholder=""
 												name="name">
@@ -55,7 +55,7 @@
 												<input type="text" id="abbr"
                                               class="form-control"
                                               placeholder="  "
-                                             value="{{$category->slug}}"
+                                             value="categorySlug"
                                               name="slug">
 											  @error("slug")
                                               <span class="text-danger">{{$message}}</span>

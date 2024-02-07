@@ -54,13 +54,13 @@
 
 
                       <tbody>
-                      @isset($categories)
-                            @foreach ($categories as $category)
+                     
+                            
                                 <tr>
-                                    <td>{{$category ->name}}</td>
-                                    <td>{{$category ->_parent->name ?? ''}}</td>
-                                    <td>{{$category ->slug}}</td>
-                                    <td>{{$category ->getActive()}}</td>
+                                    <td>category nama</td>
+                                    <td>category parent name</td>
+                                    <td>category slug</td>
+                                    <td>category active</td>
                                     
                                     {{-- <td><img style="width: 200px ; height:100px" src=""></td> --}}
                                         <td>
@@ -75,9 +75,7 @@
                                             </div>
                                         </td>
                                 </tr>
-                            @endforeach
-                          @endisset
-                     
+                           
                       </tbody>
                     </table>
                   </div>
