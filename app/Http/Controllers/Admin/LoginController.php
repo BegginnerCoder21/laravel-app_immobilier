@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\AdminLoginRequest;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Models\Admin;
 use App\Services\authUser;
@@ -25,7 +26,7 @@ class LoginController extends Controller
     //     $admin->save();
     // }
 
-    public function login(LoginRequest $request)
+    public function login(AdminLoginRequest $request)
     {
         $isAuth = (new authUser())->authUserAdmin(email: $request->email, password: $request->password);
 

@@ -9,15 +9,15 @@
           <h1 class="text-gray-300 text-2xl mt-4  "> Login </h1>
         </div>
         <form method="POST" action="{{ route('login') }}">
-  
+
           @csrf
-  
+
           <div class="text-lg mb-10">
             {{-- <x-input-label for="email" :value="__('Email')" class="text-xl text-white ml-4" /> --}}
             <input  class="rounded-xl w-full border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="email" id="email" name="email" :value="old('email')" required autofocus autocomplete="username" placeholder="Entrer votre email" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
           </div>
-  
+
           <div class="mb-4 text-lg">
             <input class="rounded-xl w-full border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="password" name="password" id="password" required autocomplete="current-password" placeholder="Entrer votre mot de passe" />
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
@@ -26,16 +26,16 @@
           <div class="block mt-4">
             <label for="remember_me" class="inline-flex items-center">
                 <input id="remember_me" type="checkbox" class="rounded ml-2 border-gray-300 text-yellow-600 shadow-sm focus:ring-yellow-400" name="remember">
-                <span class="ms-2 text-sm text-gray-600 text-inherit">{{ __('Se souvenir de moi') }}</span>
+                <span class="ms-2 text-sm text-gray-600 text-inherit">Se souvenir de moi</span>
             </label>
         </div>
-  
+
           <div class="flex justify-center text-lg text-black mt-10 flex-col items-center">
-            
+
             <button type="submit" class="rounded-3xl mb-4 bg-yellow-400 w-[150px] bg-opacity-50 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-yellow-600">Connexion</button>
-  
+
                   <a class="underline text-sm text-yellow-400 hover:text-yellow-600 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('register') }}">
-                      {{ __('Pas de compte ? Inscrivez-vous') }}
+                      Pas de compte ? Inscrivez-vous
                   </a>
             {{-- @if (Route::has('password.request'))
                   <a class="underline text-sm text-yellow-400 hover:text-yellow-600 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
