@@ -20,10 +20,10 @@
   <div class="menu_section">
     <h3>General</h3>
     <ul class="nav side-menu">
-    <li><a><i class="fa fa-home"></i> Categories <span class="fa fa-chevron-down"></span></a>
+    <li><a><i class="fa fa-home"></i>{{ __('admin/sidebar.categories') }} <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href=""> Toutes les catégories</a></li>
-                      <li><a href="">Ajouter nouvelle catégory</a></li>
+                      <li><a href=""> {{ __('admin/sidebar.all categories') }}</a></li>
+                      <li><a href=""> {{ __('admin/sidebar.add new category') }}</a></li>
                 
                     </ul>
                   </li>
@@ -33,10 +33,10 @@
 
       <ul class="nav side-menu">
         <li>
-          <a><i class="fa fa-home"></i>Villes <span class="fa fa-chevron-down"></span></a>
+          <a><i class="fa fa-home"></i>{{ __('admin/sidebar.cities') }} <span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
-                    <li><a href="">Toutes les villes</a></li>
-                    <li><a href="">Ajouter une ville</a></li>
+                    <li><a href="">{{ __('admin/sidebar.all cities') }}</a></li>
+                    <li><a href="">{{ __('admin/sidebar.add new city') }}</a></li>
                     
                 </ul>
         </li>
@@ -45,10 +45,10 @@
 
       <ul class="nav side-menu">
         <li>
-          <a><i class="fa fa-user"></i>Users<span class="fa fa-chevron-down"></span></a>
+          <a><i class="fa fa-user"></i>{{ __('admin/sidebar.users') }}<span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
-                    <li><a href="">Tous les utilisateurs</a></li>
-                    <li><a href="">Créer un nouvel utilisateur</a></li>
+                    <li><a href="">{{ __('admin/sidebar.all users') }}</a></li>
+                    <li><a href="">{{ __('admin/sidebar.add new user') }}</a></li>
                     
                 </ul>
         </li>
@@ -57,10 +57,10 @@
       
       <ul class="nav side-menu">
         <li>
-          <a><i class="fa fa-home"></i>Propriétés<span class="fa fa-chevron-down"></span></a>
+          <a><i class="fa fa-home"></i>{{ __('admin/sidebar.properties') }}<span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
-                    <li><a href="">Toutes les propriétés</a></li>
-                    <li><a href="">Créer une propriété</a></li>
+                    <li><a href="">{{ __('admin/sidebar.all properties') }}</a></li>
+                    <li><a href="">{{ __('admin/sidebar.add new property') }}</a></li>
                 </ul>
         </li>
       </ul>
@@ -68,10 +68,10 @@
       
       <ul class="nav side-menu">
         <li>
-          <a><i class="fa fa-user"></i>glissières<span class="fa fa-chevron-down"></span></a>
+          <a><i class="fa fa-user"></i>{{ __('admin/sidebar.sliders') }}<span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
                 
-                    <li><a href="">Créer un nouveau curseur</a></li>
+                    <li><a href="">{{ __('admin/sidebar.create new slider') }}</a></li>
                     
                 </ul>
         </li>

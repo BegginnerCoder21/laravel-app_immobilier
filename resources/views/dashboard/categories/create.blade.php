@@ -70,11 +70,11 @@
 											<div class="col-md-6 col-sm-6">
 												<select name="parent_id" class="form-control">
 														<optgroup>
-														@if($categories && $categories -> count() > 0)
-															@foreach($categories as $category)
-																<option value="{{$category ->id }}">{{$category ->name}}</option>
-															@endforeach
-														@endif
+														
+															
+																<option value="#">category</option>
+															
+														
 														</optgroup>
 												</select>
 												@error('parent_id')

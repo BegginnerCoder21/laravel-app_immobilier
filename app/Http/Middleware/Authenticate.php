@@ -13,7 +13,7 @@ class Authenticate extends Middleware
      */
     protected function redirectTo(Request $request): ?string
     {
-        
+
         if (!$request->expectsJson()) {
             if (FacadesRequest::fullUrlIs("http://127.0.0.1:8000/admin*")) {
                 return route('get.admin.login');
