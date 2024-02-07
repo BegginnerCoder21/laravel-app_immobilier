@@ -13,4 +13,10 @@ class MainCategories extends Controller
 
         return view('dashboard.categories.index',compact('categories'));
     }
+
+    public function create(){
+
+        $categories = Category::select('id','parent_id')->get();
+        return view('dashboard.categories.create',compact('categories'));
+    }
 }
