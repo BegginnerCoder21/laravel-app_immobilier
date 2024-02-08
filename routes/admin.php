@@ -14,6 +14,16 @@ Route::group(
 Route::prefix('admin')->middleware('auth:admin')->group(function(){
 
     Route::get('/', [AdminController::class, 'index'])->name('admin.dashboard');
+
+    Route::prefix('main_categories')->controller(\App\Http\Controllers\Admin\MainController::class)->group(function (){
+        Route::get('/','index')->name('admin.categories');
+        Route::get('create','create')->name('admin.categories.create');
+        Route::post('store','store')->name('admin.categories.store');
+        Route::get('edit/{id}','edit')->name('admin.categories.edit');
+        Route::post('update{id}','update')->name('admin.categories.update');
+        Route::get('delete/{id}','delete')->name('admin.categories.delete');
+
+    });
 });
 
 Route::prefix('admin')->middleware('guest:admin')->group(function () {

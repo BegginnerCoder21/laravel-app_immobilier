@@ -24,11 +24,11 @@
                     <ul class="nav child_menu">
                       <li><a href=""> {{ __('admin/sidebar.all categories') }}</a></li>
                       <li><a href=""> {{ __('admin/sidebar.add new category') }}</a></li>
-                
+
                     </ul>
                   </li>
-      
-    
+
+
     </ul>
 
       <ul class="nav side-menu">
@@ -37,24 +37,24 @@
               <ul class="nav child_menu">
                     <li><a href="">{{ __('admin/sidebar.all cities') }}</a></li>
                     <li><a href="">{{ __('admin/sidebar.add new city') }}</a></li>
-                    
+
                 </ul>
         </li>
       </ul>
-      
+
 
       <ul class="nav side-menu">
         <li>
           <a><i class="fa fa-user"></i>{{ __('admin/sidebar.users') }}<span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
-                    <li><a href="">{{ __('admin/sidebar.all users') }}</a></li>
-                    <li><a href="">{{ __('admin/sidebar.add new user') }}</a></li>
-                    
+                    <li><a href="{{route('admin.categories')}}">{{ __('admin/sidebar.all users') }}</a></li>
+                    <li><a href="{{route('admin.categories.create')}}">{{ __('admin/sidebar.add new user') }}</a></li>
+
                 </ul>
         </li>
       </ul>
 
-      
+
       <ul class="nav side-menu">
         <li>
           <a><i class="fa fa-home"></i>{{ __('admin/sidebar.properties') }}<span class="fa fa-chevron-down"></span></a>
@@ -65,14 +65,14 @@
         </li>
       </ul>
 
-      
+
       <ul class="nav side-menu">
         <li>
           <a><i class="fa fa-user"></i>{{ __('admin/sidebar.sliders') }}<span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
-                
+
                     <li><a href="">{{ __('admin/sidebar.create new slider') }}</a></li>
-                    
+
                 </ul>
         </li>
       </ul>
