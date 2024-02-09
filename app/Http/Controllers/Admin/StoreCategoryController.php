@@ -40,7 +40,7 @@ class StoreCategoryController extends Controller
 
             return redirect()->route('admin.categories')->with(["succes" => "La session a été mis à jour"]);
         } catch (\Exception $ex) {
-            
+
             DB::rollBack();
             return redirect()->route('admin.categories')->with(["error" => "Quelque chose s'est mal passé"]);
         }

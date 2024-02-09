@@ -9,14 +9,18 @@ use Illuminate\Http\Request;
 class MainController extends Controller
 {
     public function index(){
-        $categories = Category::with('_parent');
+        $categories = Category::translatedIn(app()->getLocale())
+                                                ->with('_parent')
+                                                ->orderByDesc('id')
+                                                ->get();
 
         return view('dashboard.categories.index',compact('categories'));
     }
 
     public function create(){
 
-        $categories = Category::select('id','parent_id')->get();
+        $categories = Category::translatedIn(app()->getLocale())->select('id','parent_id')->get();
+
         return view('dashboard.categories.create',compact('categories'));
     }
 }
