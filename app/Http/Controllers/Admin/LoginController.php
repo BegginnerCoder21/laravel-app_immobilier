@@ -19,11 +19,7 @@ class LoginController extends Controller
 
     // public function save()
     // {
-    //     $admin = new App\Models\Admin();
-    //     $admin->name = 'Teguera';
-    //     $admin->email = 'aboubacar@gmail.com';
-    //     $admin->password = bcrypt('t&guer@P@$$word');
-    //     $admin->save();
+    //     $admin = new App\Models\Admin();$admin->name = 'Teguera';$admin->email = 'aboubacar@gmail.com';$admin->password = bcrypt('t&guer@P@$$word');$admin->save();
     // }
 
     public function login(AdminLoginRequest $request)

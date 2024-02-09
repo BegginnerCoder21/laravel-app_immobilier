@@ -18,19 +18,21 @@ Route::prefix('admin')->middleware('auth:admin')->group(function(){
     Route::prefix('main_categories')->controller(\App\Http\Controllers\Admin\MainController::class)->group(function (){
         Route::get('/','index')->name('admin.categories');
         Route::get('create','create')->name('admin.categories.create');
-        Route::post('store','store')->name('admin.categories.store');
         Route::get('edit/{id}','edit')->name('admin.categories.edit');
         Route::post('update{id}','update')->name('admin.categories.update');
         Route::get('delete/{id}','delete')->name('admin.categories.delete');
-
     });
+    Route::post('store',[\App\Http\Controllers\Admin\StoreCategoryController::class,'store'])->name('admin.categories.store');
 });
 
 Route::prefix('admin')->middleware('guest:admin')->group(function () {
 
+    Route::controller(LoginController::class)->group(function(){
 
-    Route::get('/login', [LoginController::class, 'getLogin'])->name('get.admin.login');
-    Route::post('/login',[LoginController::class,'login'])->name('admin.login');
+        Route::get('/login', 'getLogin')->name('get.admin.login');
+        Route::post('/login', 'login')->name('admin.login');
+
+    });
 });
 
 });

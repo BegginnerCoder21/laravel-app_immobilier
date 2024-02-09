@@ -22,8 +22,8 @@
     <ul class="nav side-menu">
     <li><a><i class="fa fa-home"></i>{{ __('admin/sidebar.categories') }} <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href=""> {{ __('admin/sidebar.all categories') }}</a></li>
-                      <li><a href=""> {{ __('admin/sidebar.add new category') }}</a></li>
+                      <li><a href="{{route('admin.categories')}}"> {{ __('admin/sidebar.all categories') }}</a></li>
+                      <li><a href="{{route('admin.categories.create')}}"> {{ __('admin/sidebar.add new category') }}</a></li>
 
                     </ul>
                   </li>
@@ -47,8 +47,8 @@
         <li>
           <a><i class="fa fa-user"></i>{{ __('admin/sidebar.users') }}<span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
-                    <li><a href="{{route('admin.categories')}}">{{ __('admin/sidebar.all users') }}</a></li>
-                    <li><a href="{{route('admin.categories.create')}}">{{ __('admin/sidebar.add new user') }}</a></li>
+                    <li><a href="">{{ __('admin/sidebar.all users') }}</a></li>
+                    <li><a href="">{{ __('admin/sidebar.add new user') }}</a></li>
 
                 </ul>
         </li>

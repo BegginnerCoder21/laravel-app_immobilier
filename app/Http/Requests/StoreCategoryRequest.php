@@ -3,8 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
-class AdminLoginRequest extends FormRequest
+class StoreCategoryRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,17 +23,11 @@ class AdminLoginRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email' => ['required', 'string', 'email'],
-            'password' => ['required', 'string'],
-        ];
-    }
-
-    public function messages()
-    {
-        return [
-            "email.required" => "Le champ email  est obligatoire.",
-            "email.email" => "Vous devez entrer un email",
-            'password.required' => "Le champ mot de passe est obligatoire.",
+            'name' => ['string','required'],
+            'type' => ['integer','required'],
+            'parent_id' => ['integer'],
+            'is_active' => ['integer','bool'],
+            'slug' => ['string',Rule::unique('categories')->ignore($this->id)]
         ];
     }
 }

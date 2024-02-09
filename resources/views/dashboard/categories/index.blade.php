@@ -57,7 +57,7 @@
                      
                             
                                 <tr>
-                                    <td>category nama</td>
+                                    <td>category name</td>
                                     <td>category parent name</td>
                                     <td>category slug</td>
                                     <td>category active</td>

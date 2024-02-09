@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class CategoryTranslatin extends Model
+class CategoryTranslation extends Model
 {
     use HasFactory;
 
     protected $fillable = ['name'];
 
-    public $timestamps = true;
+    public $timestamps = false;
 }
