@@ -26,12 +26,13 @@ class StoreCategoryController extends Controller
             }
 
             if ($request->type == CategoryType::mainCategory) {
+                dd('here');
                 $request->merge(["parent_id" => null]);
             }
 
             Category::create([
                 'name' => $request->validated('name'),
-                'parent_id' => $request->parend_id,
+                'parent_id' => $request->parent_id,
                 'is_active' => $request->validated('is_active'),
                 'slug' => $request->validated('slug')
             ]);
