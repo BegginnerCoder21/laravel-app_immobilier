@@ -32,43 +32,29 @@ class MainController extends Controller
         $category = Category::findOrFail($id);
 
         if(!$category){
-            return view('admin.categories')->with(['error' => "Category non trouvé"]);
+            return route('admin.categories')->with(['error' => "Category non trouvé"]);
         }
 
         return view('dashboard.categories.edit',compact('category'));
 
     }
 
-    public function update($id, UpdateCategoryRequest $request){
-
+    public function delete($id){
         try {
-            DB::beginTransaction();
+
             $category = Category::findOrFail($id);
 
             if(!$category){
-                return view('admin.categories')->with(['error' => "Category non trouvé"]);
+                return route('admin.categories')->with(['error' => "Category non trouvé"]);
             }
 
-            if (!$request->has('is_active')) {
-                $request->merge(['is_active' => 0]);
-            } else {
-                $request->merge(['is_active' => 1]);
-            }
+            $category->delete();
 
-            $category->update([
-                ...$request->validated(),
-                'is_active' => $request->is_active
-            ]);
-
-            DB::commit();
-
-            return redirect()->route('admin.categories')->with(["succes" => "La category a été mis à jour"]);
+            return redirect()->route('admin.categories')->with(['success' => "Category supprimé avec succès."]);
         }catch (\Exception $error){
             DB::rollBack();
-            return redirect()->route('admin.categories')->with(["error" => "Quelque chose s'est mal passé"]);
+            return redirect()->route('admin.categories')->with(['error' => "Quelque chose s'est mal passé"]);
         }
 
-
     }
-
 }

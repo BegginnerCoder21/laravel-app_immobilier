@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\LoginController;
+use App\Http\Controllers\Admin\StoreCategoryController;
+use App\Http\Controllers\Admin\UpdateCategoryController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 Route::group(
@@ -19,10 +21,10 @@ Route::prefix('admin')->middleware('auth:admin')->group(function(){
         Route::get('/','index')->name('admin.categories');
         Route::get('create','create')->name('admin.categories.create');
         Route::get('edit/{id}','edit')->name('admin.categories.edit');
-        Route::post('update{id}','update')->name('admin.categories.update');
         Route::get('delete/{id}','delete')->name('admin.categories.delete');
     });
-    Route::post('store',[\App\Http\Controllers\Admin\StoreCategoryController::class,'store'])->name('admin.categories.store');
+    Route::post('store',[StoreCategoryController::class,'store'])->name('admin.categories.store');
+    Route::post('update{id}',[UpdateCategoryController::class,'update'])->name('admin.categories.update');
 });
 
 Route::prefix('admin')->middleware('guest:admin')->group(function () {

@@ -68,7 +68,7 @@
 										<div class="row hidden" id="cats_list" >
 											<label class="col-form-label col-md-3 col-sm-3 label-align">Choose Category</label>
 											<div class="col-md-6 col-sm-6">
-												<select name="parent_id" class="form-control">
+                                                    <select name="parent_id" class="form-control">
 														<optgroup>
                                                             @if($categories && $categories->count() > 0)
 																@foreach ($categories as $category)

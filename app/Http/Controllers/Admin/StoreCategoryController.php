@@ -30,19 +30,20 @@ class StoreCategoryController extends Controller
                 $request->merge(["parent_id" => null]);
             }
 
+
             Category::create([
-                'name' => $request->validated('name'),
-                'parent_id' => $request->parent_id,
-                'is_active' => $request->validated('is_active'),
-                'slug' => $request->validated('slug')
+                ...$request->validated(),
+                'is_active' => $request->is_active,
+                'parent_id' => $request->parent_id
             ]);
 
             DB::commit();
 
-            return redirect()->route('admin.categories')->with(["succes" => "La session a été mis à jour"]);
+            return redirect()->route('admin.categories')->with(["success" => "La session a été mis à jour"]);
         } catch (\Exception $ex) {
 
             DB::rollBack();
+
             return redirect()->route('admin.categories')->with(["error" => "Quelque chose s'est mal passé"]);
         }
     }

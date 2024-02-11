@@ -75,9 +75,9 @@
                                                 name="is_active"
                                                 id="switcheryColor4"
                                                 class="switchery" data-color="success"
-                                                checked/>
+                                                {{$category->is_active ? 'checked' : ''}}/>
 												<label for="switcheryColor4"
-												class="card-title ml-1">Active</label>
+											    	class="card-title ml-1">Active</label>
 
 												@error("is_active")
 												<span class="text-danger">{{$message}}</span>
@@ -91,7 +91,9 @@
 										<div class="ln_solid"></div>
 										<div class="item form-group">
 											<div class="col-md-6 col-sm-6 offset-md-3">
-												<button class="btn btn-primary" type="button">Cancel</button>
+
+													<a class="btn btn-primary" href="{{route('admin.categories')}}">Cancel</a>
+
 												<button type="submit" class="btn btn-success">Submit</button>
 											</div>
 										</div>
