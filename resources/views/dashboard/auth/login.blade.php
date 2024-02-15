@@ -30,7 +30,7 @@
               </div>
 
               <div>
-                  <button type="submit" class="btn btn-info btn-lg btn-block"><i class="ft-unlock"></i>Connexion</button>
+                  <button type="submit" class="btn bg-blue-500 btn-info btn-lg btn-block"><i class="ft-unlock"></i>Connexion</button>
               </div>
 
 

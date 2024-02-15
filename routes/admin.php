@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\LoginController;
+use App\Http\Controllers\Admin\MainCategoryController;
 use App\Http\Controllers\Admin\StoreCategoryController;
 use App\Http\Controllers\Admin\UpdateCategoryController;
+use App\Http\Controllers\MainCityController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 Route::group(
@@ -17,14 +19,33 @@ Route::prefix('admin')->middleware('auth:admin')->group(function(){
 
     Route::get('/', [AdminController::class, 'index'])->name('admin.dashboard');
 
-    Route::prefix('main_categories')->controller(\App\Http\Controllers\Admin\MainController::class)->group(function (){
-        Route::get('/','index')->name('admin.categories');
-        Route::get('create','create')->name('admin.categories.create');
-        Route::get('edit/{id}','edit')->name('admin.categories.edit');
-        Route::get('delete/{id}','delete')->name('admin.categories.delete');
+    Route::prefix('main_categories')->group(function(){
+        
+        Route::controller(MainCategoryController::class)->group(function (){
+            Route::get('/','index')->name('admin.categories');
+            Route::get('create','create')->name('admin.categories.create');
+            Route::get('edit/{id}','edit')->name('admin.categories.edit');
+            Route::get('delete/{id}','delete')->name('admin.categories.delete');
+        });
+        Route::post('store',[StoreCategoryController::class,'store'])->name('admin.categories.store');
+        Route::post('update{id}',[UpdateCategoryController::class,'update'])->name('admin.categories.update');
+
     });
-    Route::post('store',[StoreCategoryController::class,'store'])->name('admin.categories.store');
-    Route::post('update{id}',[UpdateCategoryController::class,'update'])->name('admin.categories.update');
+
+    Route::prefix('cities')->group(function(){
+
+        Route::controller(MainCityController::class)->group(function (){
+            Route::get('/','index')->name('admin.cities');
+            Route::get('create','create')->name('admin.cities.create');
+            Route::get('edit/{id}','edit')->name('admin.cities.edit');
+            Route::get('delete/{id}','delete')->name('admin.cities.delete');
+        });
+        Route::post('store',[StoreCategoryController::class,'store'])->name('admin.cities.store');
+        Route::post('update{id}',[UpdateCategoryController::class,'update'])->name('admin.cities.update');
+
+    });
+
+    
 });
 
 Route::prefix('admin')->middleware('guest:admin')->group(function () {

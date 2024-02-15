@@ -8,7 +8,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class MainController extends Controller
+class MainCategoryController extends Controller
 {
     public function index(){
         $categories = Category::translatedIn(app()->getLocale())
@@ -32,7 +32,7 @@ class MainController extends Controller
         $category = Category::findOrFail($id);
 
         if(!$category){
-            return route('admin.categories')->with(['error' => "Category non trouvé"]);
+            return redirect()->route('admin.categories')->with(['error' => "Category non trouvé"]);
         }
 
         return view('dashboard.categories.edit',compact('category'));
@@ -45,7 +45,7 @@ class MainController extends Controller
             $category = Category::findOrFail($id);
 
             if(!$category){
-                return route('admin.categories')->with(['error' => "Category non trouvé"]);
+                return redirect()->route('admin.categories')->with(['error' => "Category non trouvé"]);
             }
 
             $category->delete();

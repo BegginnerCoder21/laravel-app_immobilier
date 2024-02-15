@@ -26,7 +26,6 @@ class StoreCategoryController extends Controller
             }
 
             if ($request->type == CategoryType::mainCategory) {
-                dd('here');
                 $request->merge(["parent_id" => null]);
             }
 
