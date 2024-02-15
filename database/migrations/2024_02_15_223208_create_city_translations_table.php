@@ -12,8 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('city_translations', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('id');
+            $table->integer('city_id')->unsigned()->nullable();
+            $table->string('locale');
+            $table->string('name');
+            $table->unique(['city_id','locale']);
+            $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
         });
     }
 
