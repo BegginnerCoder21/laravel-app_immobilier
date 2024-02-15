@@ -33,4 +33,9 @@ class City extends Model
         return $this->is_active == 0 ? 'Inactive' : 'Active';
     }
 
+    public function getPhotoAttribute()
+    {
+        $this->photo !== null ? asset('assets/admin/cities' . $this->photo) : "";
+    }
+
 }

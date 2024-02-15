@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\City\StoreCityController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\MainCategoryController;
 use App\Http\Controllers\Admin\StoreCategoryController;
@@ -40,7 +41,7 @@ Route::prefix('admin')->middleware('auth:admin')->group(function(){
             Route::get('edit/{id}','edit')->name('admin.cities.edit');
             Route::get('delete/{id}','delete')->name('admin.cities.delete');
         });
-        Route::post('store',[StoreCategoryController::class,'store'])->name('admin.cities.store');
+        Route::middleware('isActive')->post('store',[StoreCityController::class,'store'])->name('admin.cities.store');
         Route::post('update{id}',[UpdateCategoryController::class,'update'])->name('admin.cities.update');
 
     });
