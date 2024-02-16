@@ -38,7 +38,7 @@ class StoreCategoryController extends Controller
 
             DB::commit();
 
-            return redirect()->route('admin.categories')->with(["success" => "La session a été mis à jour"]);
+            return redirect()->route('admin.categories')->with(["success" => "La category a bien été crée"]);
         } catch (\Exception $ex) {
 
             DB::rollBack();

@@ -21,8 +21,7 @@ class MainCategoryController extends Controller
 
     public function create(){
 
-        $categories = Category::translatedIn(app()->getLocale())
-                                                                ->select('id','parent_id')
+        $categories = Category::translatedIn(app()->getLocale())->select('id','parent_id')
                                                                 ->get();
 
         return view('dashboard.categories.create', compact('categories'));

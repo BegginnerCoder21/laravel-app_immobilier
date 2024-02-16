@@ -2,12 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\City\MainCityController;
 use App\Http\Controllers\Admin\City\StoreCityController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\MainCategoryController;
 use App\Http\Controllers\Admin\StoreCategoryController;
 use App\Http\Controllers\Admin\UpdateCategoryController;
-use App\Http\Controllers\MainCityController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 Route::group(

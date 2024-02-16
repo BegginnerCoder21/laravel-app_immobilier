@@ -24,6 +24,7 @@ class CreatingCityRequest extends FormRequest
         return [
             'is_active' => ['required','bool'],
             'image' => ['required'],
+            'name' => ['required','string']
         ];
     }
 }

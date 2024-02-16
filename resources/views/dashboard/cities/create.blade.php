@@ -1,4 +1,4 @@
-		
+
 @extends('layouts.dashboard.admin')
 @section('content')
 
@@ -7,21 +7,21 @@
 				<div class="">
 					<div class="page-title">
 						<div class="title_left">
-							<h3>Cities</h3>
+							<h3>Villes</h3>
 						</div>
 
-					
+
 					</div>
 					<div class="clearfix"></div>
 					<div class="row">
 						<div class="col-md-12 col-sm-12 ">
 							<div class="x_panel">
 								<div class="x_title">
-									<h2>Create<small>Cities</small></h2>
+									<h2>Créer<small>des villes</small></h2>
 									<ul class="nav navbar-right panel_toolbox">
 										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 										</li>
-							
+
 										<li><a class="close-link"><i class="fa fa-close"></i></a>
 										</li>
 									</ul>
@@ -31,15 +31,15 @@
 
 								<div class="x_content">
 									<br />
-									<form class="form" action="" method="POST"
+									<form class="form" action="{{ route('admin.cities.store') }}" method="POST"
 									enctype="multipart/form-data">
 									@csrf
 
 
 									<div class="form-group">
-									<label>Pictur of City</label>
+									<label>Image de la ville</label>
 										<label class="form-label"  id="projectinput">
-											<input type="file"  id="file" name="photo">
+											<input type="file"  id="file" name="image">
 										</label>
 
 										@error("photo")
@@ -68,8 +68,8 @@
 
 
 									<div class="form-group">
-                                              <label for="eventInput1">Status </label>
-                                           
+                                              <label for="eventInput1">Statut </label>
+
                                                 <input type="checkbox" value="1"
                                                 name="is_active"
                                                 id="switcheryColor4"
@@ -77,33 +77,33 @@
                                                 checked/>
 												<label for="switcheryColor4"
 												class="card-title ml-1">Active</label>
-                
+
 												@error("is_active")
 												<span class="text-danger">{{$message}}</span>
 												@enderror
                                         </div>
 
-						
-								
-								
+
+
+
 										<div class="ln_solid"></div>
 										<div class="item form-group">
 											<div class="col-md-6 col-sm-6 offset-md-3">
-												<button class="btn btn-primary" type="button">Cancel</button>
-												<button type="submit" class="btn btn-success">Submit</button>
+												<button class="btn btn-primary" type="button">Annuler</button>
+												<button type="submit" class="btn btn-success">Soumettre</button>
 											</div>
 										</div>
 
 									</form>
 
-							
+
 								</div>
 							</div>
 						</div>
 					</div>
 
-				
-					
+
+
 				</div>
 			</div>
 			<!-- /page content -->

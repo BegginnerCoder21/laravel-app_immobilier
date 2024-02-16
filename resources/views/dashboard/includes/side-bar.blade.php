@@ -35,8 +35,8 @@
         <li>
           <a><i class="fa fa-home"></i>{{ __('admin/sidebar.cities') }} <span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
-                    <li><a href="">{{ __('admin/sidebar.all cities') }}</a></li>
-                    <li><a href="">{{ __('admin/sidebar.add new city') }}</a></li>
+                    <li><a href="{{ route('admin.cities') }}">{{ __('admin/sidebar.all cities') }}</a></li>
+                    <li><a href="{{ route('admin.cities.create') }}">{{ __('admin/sidebar.add new city') }}</a></li>
 
                 </ul>
         </li>

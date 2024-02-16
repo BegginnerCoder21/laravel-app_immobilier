@@ -15,8 +15,7 @@ class City extends Model
 
     protected $fillable = [
         'is_active',
-        'slug',
-        'parent_id',
+        'photo',
     ];
 
     protected $translatedAttributes = ['name'];
@@ -33,9 +32,8 @@ class City extends Model
         return $this->is_active == 0 ? 'Inactive' : 'Active';
     }
 
-    public function getPhotoAttribute()
+    public function getPhotoAttribute($val)
     {
-        $this->photo !== null ? asset('assets/admin/cities' . $this->photo) : "";
+        return ($val !== null) ? asset('storage/' . $val) : "";
     }
-
 }
