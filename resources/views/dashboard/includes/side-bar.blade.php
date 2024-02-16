@@ -47,8 +47,8 @@
         <li>
           <a><i class="fa fa-user"></i>{{ __('admin/sidebar.users') }}<span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
-                    <li><a href="">{{ __('admin/sidebar.all users') }}</a></li>
-                    <li><a href="">{{ __('admin/sidebar.add new user') }}</a></li>
+                    <li><a href="{{ route('admin.users') }}">{{ __('admin/sidebar.all users') }}</a></li>
+                    <li><a href="{{ route('admin.users.create') }}">{{ __('admin/sidebar.add new user') }}</a></li>
 
                 </ul>
         </li>

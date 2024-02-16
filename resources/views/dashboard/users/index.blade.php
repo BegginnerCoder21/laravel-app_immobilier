@@ -62,7 +62,7 @@
                                             <div class="btn-group" role="group"
                                                     aria-label="Basic example">
                 
-                                                    <a href=""
+                                                    <a href="{{ route('admin.users.delete',$user->id) }}"
                                                         class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">Delete</a>
                                             </div>
                                         </td>

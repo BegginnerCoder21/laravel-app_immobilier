@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\MainCategoryController;
 use App\Http\Controllers\Admin\StoreCategoryController;
 use App\Http\Controllers\Admin\UpdateCategoryController;
+use App\Http\Controllers\Admin\User\MainUserController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 Route::group(
@@ -50,6 +51,19 @@ Route::prefix('admin')->middleware('auth:admin')->group(function(){
             Route::post('store',[StoreCityController::class,'store'])->name('admin.cities.store');
             Route::post('update/{id}',[UpdateCityController::class,'update'])->name('admin.cities.update');
         });
+
+    });
+
+    Route::prefix('user')->group(function(){
+
+        Route::controller(MainUserController::class)->group(function (){
+            Route::get('/','index')->name('admin.users');
+            Route::get('create','create')->name('admin.users.create');
+            Route::post('store','store')->name('admin.users.store');
+            Route::get('delete/{id}','delete')->name('admin.users.delete');
+        });
+    
+
 
     });
 

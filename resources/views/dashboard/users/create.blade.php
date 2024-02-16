@@ -7,7 +7,7 @@
 				<div class="">
 					<div class="page-title">
 						<div class="title_left">
-							<h3>USERS</h3>
+							<h3>Utilisateurs</h3>
 						</div>
 
 					
@@ -17,7 +17,7 @@
 						<div class="col-md-12 col-sm-12 ">
 							<div class="x_panel">
 								<div class="x_title">
-									<h2>Create<small>User</small></h2>
+									<h2>Créer<small>Utilisateur</small></h2>
 									<ul class="nav navbar-right panel_toolbox">
 										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 										</li>
@@ -31,10 +31,14 @@
 
 								<div class="x_content">
 									<br />
-									<form class="form" action="" method="POST"
+									<form class="form" action="{{ route('admin.users.store') }}" method="POST"
 									enctype="multipart/form-data">
 									@csrf
-
+									@foreach ($errors->all() as $error)
+									<div class="text-red-500 mt-2xx">
+										{{$error}}
+									</div>
+								@endforeach
 
 										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Name <span class="required">*</span>
