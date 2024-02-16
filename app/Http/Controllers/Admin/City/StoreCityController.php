@@ -11,16 +11,17 @@ class StoreCityController extends Controller
 {
     public function store(CreatingCityRequest $request)
     {
-
-        $imageUrl = "";
+        
+      
         if ($request->has('image')) {
-            $imageUrl = $request->image->store('admin/cities','public');
+            $imageUrl = $request->image->store('admin/cities', 'public');
+            $request->merge(["photo" => $imageUrl]);
         }
 
 
         $city = City::create([
             ...$request->validated(),
-            'photo' => $imageUrl
+            'photo' => $request->photo
         ]);
 
         return redirect()->route('admin.cities')->with(["success" => "La ville a bien été crée"]);

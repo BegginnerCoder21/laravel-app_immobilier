@@ -20,12 +20,6 @@ class UpdateCategoryController extends Controller
                 return view('admin.categories')->with(['error' => "Category non trouvé"]);
             }
 
-            if (!$request->has('is_active')) {
-                $request->merge(['is_active' => 0]);
-            } else {
-                $request->merge(['is_active' => 1]);
-            }
-
             $category->update([
                 ...$request->validated(),
                 'is_active' => $request->is_active

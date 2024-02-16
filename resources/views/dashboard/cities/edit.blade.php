@@ -7,7 +7,7 @@
 				<div class="">
 					<div class="page-title">
 						<div class="title_left">
-							<h3>Cities</h3>
+							<h3>Villes</h3>
 						</div>
 
 					
@@ -17,7 +17,7 @@
 						<div class="col-md-12 col-sm-12 ">
 							<div class="x_panel">
 								<div class="x_title">
-									<h2>Edit<small>Cities</small></h2>
+									<h2>Editer<small>Villes</small></h2>
 									<ul class="nav navbar-right panel_toolbox">
 										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 										</li>
@@ -29,23 +29,20 @@
 								</div>
 								<div class="x_content">
 									<br />
-									<form class="form" action="" method="POST"
+									<form class="form" action="{{ route('admin.cities.update',$city->id) }}" method="POST"
 									enctype="multipart/form-data">
 									@csrf
-
-
-									<input name="id" value="{{$city->id}}" type="hidden">
-
+								
 									<div class="form-group">
 										<div class="text-center">
-											<img src="{{$city->photo}}" alt="" class="rounded-circle" style="width:200px;height:100px" alt="Section Photo">
+											<img src="{{asset('storage/' . $city->photo)}}" alt="" class="rounded-circle" style="width:200px;height:100px" alt="Section Photo">
 										</div>
 									</div>
 
 									<div class="form-group">
-									<label>Pictur of City</label>
+									<label>Photo de la ville</label>
 										<label class="form-label"  id="projectinput">
-											<input type="file"  id="file" name="photo">
+											<input type="file"  id="image" name="image">
 										</label>
 
 										@error("photo")
@@ -83,7 +80,7 @@
                                                 name="is_active"
                                                 id="switcheryColor4"
                                                 class="switchery" data-color="success"
-												@if($city->is_active ==1)checked @endif/>
+												{{ $city->is_active ? 'checked' : "" }}/>
 												<label for="switcheryColor4"
 												class="card-title ml-1">Active</label>
                 
@@ -99,8 +96,8 @@
 										<div class="ln_solid"></div>
 										<div class="item form-group">
 											<div class="col-md-6 col-sm-6 offset-md-3">
-												<button class="btn btn-primary" type="button">Cancel</button>
-												<button type="submit" class="btn btn-success">Submit</button>
+												<button class="btn btn-primary" type="button">Annuler</button>
+												<button type="submit" class="btn btn-success">Soumettre</button>
 											</div>
 										</div>
 

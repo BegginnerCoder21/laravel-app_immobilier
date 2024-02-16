@@ -19,11 +19,7 @@ class StoreCategoryController extends Controller
         try {
             DB::beginTransaction();
 
-            if (!$request->has('is_active')) {
-                $request->merge(['is_active' => 0]);
-            } else {
-                $request->merge(['is_active' => 1]);
-            }
+           
 
             if ($request->type == CategoryType::mainCategory) {
                 $request->merge(["parent_id" => null]);

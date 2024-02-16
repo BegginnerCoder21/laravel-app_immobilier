@@ -32,8 +32,8 @@ class City extends Model
         return $this->is_active == 0 ? 'Inactive' : 'Active';
     }
 
-    public function getPhotoAttribute($val)
-    {
-        return ($val !== null) ? asset('storage/' . $val) : "";
-    }
+    // public function getPhotoAttribute($val)
+    // {
+    //     return ($val !== null) ? asset('storage/' . $val) : "";
+    // }
 }

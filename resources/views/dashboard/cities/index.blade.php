@@ -19,7 +19,7 @@
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Cities</h2>
+                    <h2>Villes</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -43,10 +43,10 @@
                       <thead>
                         <tr>
 
-                            <th>Name </th>
-                            <th >Status</th>
+                            <th>Libellé </th>
+                            <th >Statut</th>
                             <th >Photo </th>
-                            <th >Edit</th>
+                            <th >Editer</th>
 
                         </tr>
                       </thead>
@@ -59,7 +59,7 @@
                                     <td>{{$city ->name}}</td>
 
                                     <td>{{$city ->getActive()}}</td>
-                                    <td><img style="width: 200px ; height:100px" src="{{$city->photo}}"></td>
+                                    <td><img style="width: 200px ; height:100px" src="{{asset('storage/' . $city->photo)}}"></td>
                                         <td>
                                             <div class="btn-group" role="group"
                                                     aria-label="Basic example">
