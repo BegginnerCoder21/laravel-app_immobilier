@@ -41,6 +41,11 @@ class Category extends Model implements TranslatableContract
         return $this->belongsTo(self::class, 'parent_id');
     }
 
+    public function scopeActive($query)
+    {
+        return $query->where('is_active',1);
+    }
+
     public function childrens()
     {
         return $this->hasMany(self::class, 'parent_id');
