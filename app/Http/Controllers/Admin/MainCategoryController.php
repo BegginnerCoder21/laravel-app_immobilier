@@ -11,18 +11,14 @@ use Illuminate\Support\Facades\DB;
 class MainCategoryController extends Controller
 {
     public function index(){
-        $categories = Category::translatedIn(app()->getLocale())
-                                                                ->with('_parent')
-                                                                ->orderByDesc('id')
-                                                                ->get();
+        $categories = Category::with('_parent')->orderByDesc('id')->get();
 
         return view('dashboard.categories.index', compact('categories'));
     }
 
     public function create(){
 
-        $categories = Category::translatedIn(app()->getLocale())->select('id','parent_id')
-                                                                ->get();
+        $categories = Category::select('id','parent_id')->get();
 
         return view('dashboard.categories.create', compact('categories'));
     }

@@ -34,7 +34,7 @@ class City extends Model
 
     public function scopeActive($query)
     {
-        return $query->where('is_active',1);
+        return $query->translatedIn(app()->getLocale())->where('is_active',1);
     }
 
     // public function getPhotoAttribute($val)

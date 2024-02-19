@@ -13,15 +13,13 @@ class MainCityController extends Controller
     public function index()
     {
 
-        $cities = City::translatedIn(app()->getLocale())->orderByDesc('id')
-            ->get();
+        $cities = City::orderByDesc('id')->get();
 
         return view('dashboard.cities.index', compact('cities'));
     }
 
     public function create()
     {
-
 
         return view('dashboard.cities.create');
     }

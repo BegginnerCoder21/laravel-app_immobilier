@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\City\StoreCityController;
 use App\Http\Controllers\Admin\City\UpdateCityController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\MainCategoryController;
+use App\Http\Controllers\Admin\Property\MainPropertyController;
 use App\Http\Controllers\Admin\StoreCategoryController;
 use App\Http\Controllers\Admin\UpdateCategoryController;
 use App\Http\Controllers\Admin\User\MainUserController;
@@ -64,7 +65,7 @@ Route::group(
 
             Route::prefix('properties')->group(function () {
 
-                Route::controller(MainUserController::class)->group(function () {
+                Route::controller(MainPropertyController::class)->group(function () {
                     Route::get('/', 'index')->name('admin.properties');
                     Route::get('create', 'create')->name('admin.properties.general.create');
                     Route::post('store', 'store')->name('admin.properties.general.store');

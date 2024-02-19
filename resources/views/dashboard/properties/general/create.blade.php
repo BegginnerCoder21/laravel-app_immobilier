@@ -268,9 +268,10 @@
                                             <select name="city_id" class="select2 form-control">
                                                 <optgroup label="Select the City">
                                                     @if($cities && $cities -> count() > 0)
-                                                        @foreach($cities as $cit)
+                                                        @foreach($cities as $city)
                                                             <option
-                                                                value="{{$cit->id }}">{{$cit ->name}}</option>
+                                                            
+                                                                value="{{$city->id }}">{{$city ->name}}</option>
                                                         @endforeach
                                                     @endif
                                                 </optgroup>
