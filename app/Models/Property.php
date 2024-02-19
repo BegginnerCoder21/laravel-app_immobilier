@@ -6,11 +6,45 @@ use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Property extends Model
 {
     use HasFactory,SoftDeletes,Translatable;
+
+    protected $with = ['translations'];
+
+    protected $fillable = [
+        'city_id',
+        'slug',
+        'total_price',
+        'price_meter',
+        'location',
+        'area',
+        'rooms',
+        'bedrooms',
+        'bathrooms',
+        'air_conditioning',
+        'central_heating',
+        'laundry_room',
+        'gym',
+        'alarm',
+        'window_covering',
+        'internet',
+        'is_active'
+    ];
+
+    protected $casts = [
+        'air_conditioning',
+        'central_heating',
+        'laundry_room',
+        'gym',
+        'alarm',
+        'window_covering',
+        'internet',
+        'is_active'
+    ];
 
 
     protected $translatedAttributes = [
@@ -46,8 +80,8 @@ class Property extends Model
         return $this->belongsToMany(Category::class);
     }
 
-    public function images():BelongsToMany
+    public function images():HasMany
     {
-        return $this->belongsToMany(Image::class);
+        return $this->hasMany(Image::class);
     }
 }

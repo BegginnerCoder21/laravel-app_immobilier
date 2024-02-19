@@ -68,7 +68,7 @@ Route::group(
                 Route::controller(MainPropertyController::class)->group(function () {
                     Route::get('/', 'index')->name('admin.properties');
                     Route::get('create', 'create')->name('admin.properties.general.create');
-                    Route::post('store', 'store')->name('admin.properties.general.store');
+                    Route::middleware('isActive')->post('store', 'store')->name('admin.properties.general.store');
                     Route::get('edit/{id}', 'edit')->name('admin.properties.edit');
                     Route::post('update/{id}', 'update')->name('admin.properties.update');
                     Route::get('delete/{id}', 'delete')->name('admin.properties.delete');

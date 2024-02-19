@@ -33,7 +33,7 @@
 									<br />
 						
 
-									<form class="form" action="" method="POST"
+									<form class="form" action="{{ route('admin.properties.general.store') }}" method="POST"
 											enctype="multipart/form-data">
 											@csrf
 
