@@ -7,7 +7,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>All <small> Users</small></h3>
+                <h3>Tous les <small> Utilisateurs</small></h3>
               </div>
 
         
@@ -19,7 +19,7 @@
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Users</h2>
+                    <h2>Utilisateurs</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -43,9 +43,9 @@
                       <thead>
                         <tr>
 
-                            <th>Name </th> 
+                            <th>Nom </th> 
                             <th >Email</th>
-                            <th >Edit</th>
+                            <th >Editer</th>
                         
                         </tr>
                       </thead>
@@ -63,7 +63,7 @@
                                                     aria-label="Basic example">
                 
                                                     <a href="{{ route('admin.users.delete',$user->id) }}"
-                                                        class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">Delete</a>
+                                                        class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">Supprimer</a>
                                             </div>
                                         </td>
                                 </tr>

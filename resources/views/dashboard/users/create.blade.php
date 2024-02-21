@@ -41,7 +41,7 @@
 								@endforeach
 
 										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Name <span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nom <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
 											<input type="text" id="name"
@@ -78,7 +78,7 @@
 							
 
 										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Password <span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Mot de passe <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
 											<input type="password" id="password"
@@ -110,8 +110,8 @@
 										<div class="ln_solid"></div>
 										<div class="item form-group">
 											<div class="col-md-6 col-sm-6 offset-md-3">
-												<button class="btn btn-primary" type="button">Cancel</button>
-												<button type="submit" class="btn btn-success">Submit</button>
+												<button class="btn btn-primary" type="button">Annuler</button>
+												<button type="submit" class="btn btn-success">Soumettre</button>
 											</div>
 										</div>
 

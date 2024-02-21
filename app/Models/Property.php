@@ -36,14 +36,14 @@ class Property extends Model
     ];
 
     protected $casts = [
-        'air_conditioning',
-        'central_heating',
-        'laundry_room',
-        'gym',
-        'alarm',
-        'window_covering',
-        'internet',
-        'is_active'
+        'air_conditioning => boolean',
+        'central_heating => boolean',
+        'laundry_room => boolean',
+        'gym => boolean',
+        'alarm => boolean',
+        'window_covering => boolean',
+        'internet => boolean',
+        'is_active => boolean'
     ];
 
 

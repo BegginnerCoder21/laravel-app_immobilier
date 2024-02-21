@@ -8,6 +8,8 @@ use App\Http\Controllers\Admin\City\UpdateCityController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\MainCategoryController;
 use App\Http\Controllers\Admin\Property\MainPropertyController;
+use App\Http\Controllers\Admin\Property\PropertyFeatureController;
+use App\Http\Controllers\Admin\Property\PropertyPriceController;
 use App\Http\Controllers\Admin\StoreCategoryController;
 use App\Http\Controllers\Admin\UpdateCategoryController;
 use App\Http\Controllers\Admin\User\MainUserController;
@@ -72,16 +74,21 @@ Route::group(
                     Route::get('edit/{id}', 'edit')->name('admin.properties.edit');
                     Route::post('update/{id}', 'update')->name('admin.properties.update');
                     Route::get('delete/{id}', 'delete')->name('admin.properties.delete');
-
-                    Route::post('price', 'getPrice')->name('admin.properties.price');
-                    Route::get('price/{id}', 'savePropertyPrice')->name('admin.properties.price.create');
-
-                    Route::post('feature', 'getFeature')->name('admin.properties.features');
-                    Route::get('feature/{id}', 'savePropertyFeature')->name('admin.properties.features.create');
-
+                    
                     Route::get('image/{id}', 'addImages')->name('admin.properties.images');
                     Route::post('image', 'savePropertyImages')->name('admin.properties.images.store');
                     Route::post('image/db', 'savePropertyImagesDB')->name('admin.properties.images.store.db');
+                });
+                
+                Route::controller(PropertyPriceController::class)->group(function(){
+                    
+                    Route::get('price/{id}', 'getPrice')->name('admin.properties.price');
+                    Route::post('price/{id}', 'savePropertyPrice')->name('admin.properties.price.store');
+                });
+
+                Route::controller(PropertyFeatureController::class)->group(function(){
+                    Route::get('feature/{id}', 'getFeature')->name('admin.properties.features');
+                    Route::post('feature/{id}', 'savePropertyFeature')->name('admin.properties.features.store');
                 });
             });
         });

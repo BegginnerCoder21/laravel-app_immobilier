@@ -7,7 +7,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>All <small> Cities</small></h3>
+                <h3>Toutes les <small>villes</small></h3>
               </div>
 
 
@@ -44,9 +44,9 @@
                         <tr>
 
                             <th>Libellé </th>
-                            <th >Statut</th>
-                            <th >Photo </th>
-                            <th >Editer</th>
+                            <th>Statut</th>
+                            <th>Photo </th>
+                            <th>Editer</th>
 
                         </tr>
                       </thead>
@@ -64,11 +64,11 @@
                                             <div class="btn-group" role="group"
                                                     aria-label="Basic example">
                                                     <a href="{{ route('admin.cities.edit',$city->id) }}"
-                                                    class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">Edit</a>
+                                                    class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">Editer</a>
 
 
                                                     <a href="{{ route('admin.cities.delete',$city->id) }}"
-                                                        class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">Delete</a>
+                                                        class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">Supprimer</a>
                                             </div>
                                         </td>
                                 </tr>

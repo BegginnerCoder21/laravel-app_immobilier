@@ -7,7 +7,7 @@
 				<div class="">
 					<div class="page-title">
 						<div class="title_left">
-							<h3>Categories</h3>
+							<h3>Catégories</h3>
 						</div>
 
 
@@ -17,7 +17,7 @@
 						<div class="col-md-12 col-sm-12 ">
 							<div class="x_panel">
 								<div class="x_title">
-									<h2>Create<small>Category</small></h2>
+									<h2>Créer<small>Catégorie</small></h2>
 									<ul class="nav navbar-right panel_toolbox">
 										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 										</li>
@@ -34,7 +34,7 @@
 									@csrf
 
 										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Name Of Category <span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nom de la catégorie <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
 												<input type="text" value="{{old('name')}}" id="name"
@@ -49,7 +49,7 @@
 
 
 										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Slug<span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Libellé<span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
 												<input type="text" id="abbr"
@@ -66,7 +66,7 @@
 
 
 										<div class="row hidden" id="cats_list" >
-											<label class="col-form-label col-md-3 col-sm-3 label-align">Choose Category</label>
+											<label class="col-form-label col-md-3 col-sm-3 label-align">Choisir une catégorie</label>
 											<div class="col-md-6 col-sm-6">
                                                     <select name="parent_id" class="form-control">
 														<optgroup>
@@ -105,7 +105,7 @@
 
 									 <label
 										 class="card-title ml-1">
-										 Category
+										 Catégorie
 									 </label>
 
 								 </div>
@@ -119,13 +119,13 @@
                                                class="switchery" data-color="success" onclick="show2();"/>
                                         <label
                                             class="card-title ml-1">
-                                            SubCategory
+                                            Sous-Categorie
                                         </label>
 
                                     </div>
 
 									<div class="form-group">
-                                              <label for="eventInput1">Status </label>
+                                              <label for="eventInput1">Statut </label>
 
                                                 <input type="checkbox" value="1"
                                                 name="is_active"
@@ -146,8 +146,8 @@
 										<div class="ln_solid"></div>
 										<div class="item form-group">
 											<div class="col-md-6 col-sm-6 offset-md-3">
-                                                <a class="btn btn-primary" href="{{route('admin.categories')}}">Cancel</a>
-												<button type="submit" class="btn btn-success">Submit</button>
+                                                <a class="btn btn-primary" href="{{route('admin.categories')}}">Annuler</a>
+												<button type="submit" class="btn btn-success">Soumettre</button>
 											</div>
 										</div>
 

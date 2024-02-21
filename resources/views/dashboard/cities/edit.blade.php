@@ -52,7 +52,7 @@
 
 
 										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Name Of City <span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nom de la ville <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
 											<input type="text" value="{{$city->name}}" id="name"
@@ -74,7 +74,7 @@
 
 
 										<div class="item form-group">
-                                              <label for="eventInput1">Status </label>
+                                              <label for="eventInput1">Statut </label>
                                            
                                                 <input type="checkbox" value="1"
                                                 name="is_active"

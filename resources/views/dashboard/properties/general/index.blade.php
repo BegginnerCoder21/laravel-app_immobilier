@@ -7,7 +7,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>All <small> Properties</small></h3>
+                <h3>Toutes les <small> Propriétés</small></h3>
               </div>
 
         
@@ -19,7 +19,7 @@
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Properties</h2>
+                    <h2>Propriétés</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -43,10 +43,10 @@
                     <thead class="">
                             <tr>
                                 <th>id </th>
-                                <th> Slug </th>
-                                <th>Status</th>
-                                <th>Price</th>
-                                <th>Edit</th>
+                                <th> Libellé </th>
+                                <th>Statut</th>
+                                <th>Prix</th>
+                                <th>Editer</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -60,14 +60,14 @@
                                         <td>
                                             <div class="btn-group" role="group"
                                                  aria-label="Basic example">
-                                                <a href=""
-                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">price</a>
+                                                <a href="{{ route('admin.properties.price',$property ->id) }}"
+                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">Prix</a>
 
                                                 <a href=""
-                                                   class="btn btn-outline-info btn-min-width box-shadow-3 mr-1 mb-1">Pictures</a>
+                                                   class="btn btn-outline-info btn-min-width box-shadow-3 mr-1 mb-1">Photos</a>
 
-                                                   <a href=""
-                                                    class="btn btn-outline-secondary btn-min-width box-shadow-3 mr-1 mb-1">Features</a>
+                                                   <a href="{{ route('admin.properties.features',$property ->id) }}"
+                                                    class="btn btn-outline-secondary btn-min-width box-shadow-3 mr-1 mb-1">Caractéristiques</a>
                                             </div>
                                         </td>
                                     </tr>

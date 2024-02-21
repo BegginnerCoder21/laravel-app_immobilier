@@ -34,10 +34,6 @@ class MainCityController extends Controller
     public function delete($id)
     {
         $city = City::findOrFail($id);
-
-        if (!$city) {
-            return redirect()->route('admin.categories')->with(['error' => "ville non trouvé"]);
-        }
         
         $city->delete();
         Storage::disk('public')->delete($city->photo);

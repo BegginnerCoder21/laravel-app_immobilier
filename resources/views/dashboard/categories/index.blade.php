@@ -43,11 +43,11 @@
                       <thead>
                         <tr>
 
-                            <th>Name </th>
-                            <th >Main section </th>
-                            <th >Slug </th>
-                            <th >Status </th>
-                            <th >Edit</th>
+                            <th>Nom </th>
+                            <th >Section principale </th>
+                            <th >Libellé </th>
+                            <th >Statut </th>
+                            <th >Editer</th>
 
                         </tr>
                       </thead>
@@ -68,12 +68,12 @@
                                             <div class="btn-group" role="group"
                                                  aria-label="Basic example">
                                                 <a href="{{route('admin.categories.edit', $category->id)}}"
-                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">Edit</a>
+                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">Editer</a>
 
 
                                                 <a href="{{ route('admin.categories.delete',$category->id) }}"
                                                    class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">
-                                                    Delete</a>
+                                                    Supprimer</a>
                                             </div>
                                         </td>
                                     </tr>

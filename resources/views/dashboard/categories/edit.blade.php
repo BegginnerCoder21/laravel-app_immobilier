@@ -7,7 +7,7 @@
 				<div class="">
 					<div class="page-title">
 						<div class="title_left">
-							<h3>Categories</h3>
+							<h3>Catégories</h3>
 						</div>
 
 
@@ -17,7 +17,7 @@
 						<div class="col-md-12 col-sm-12 ">
 							<div class="x_panel">
 								<div class="x_title">
-									<h2>Create<small>Category</small></h2>
+									<h2>Créer<small>Catégorie</small></h2>
 									<ul class="nav navbar-right panel_toolbox">
 										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 										</li>
@@ -34,7 +34,7 @@
 									    @csrf
 
 										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Name Of Category <span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nom de la catégorie <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
 												<input type="text" value="{{ $category->name }}" id="name"
@@ -49,7 +49,7 @@
 
 
 										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Slug<span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Libellé<span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
 												<input type="text" id="abbr"
@@ -94,7 +94,7 @@
 
 													<a class="btn btn-primary" href="{{route('admin.categories')}}">Cancel</a>
 
-												<button type="submit" class="btn btn-success">Submit</button>
+												<button type="submit" class="btn btn-success">Soumettre</button>
 											</div>
 										</div>
 

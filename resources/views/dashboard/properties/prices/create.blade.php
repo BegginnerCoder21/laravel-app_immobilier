@@ -17,7 +17,7 @@
 						<div class="col-md-12 col-sm-12 ">
 							<div class="x_panel">
 								<div class="x_title">
-									<h2>Create<small>Cities</small></h2>
+									<h2>Modification du prix et du perimètre de la <small>propriété</small></h2>
 									<ul class="nav navbar-right panel_toolbox">
 										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 										</li>
@@ -32,19 +32,19 @@
 								<div class="x_content">
 									<br />
                           <form class="form"
-                                action=""
+                                action="{{ route('admin.properties.price.store',$property->id) }}"
                                 method="POST"
                                 enctype="multipart/form-data">
                               @csrf
 
-                              <input type="hidden" name="property_id" value="{{$id}}">
+                              {{-- <input type="hidden" name="property_id" value="{{$id}}"> --}}
                               <div class="form-body">
 
-                                  <h4 class="form-section"><i class="ft-home"></i>Basic data of the product</h4>
+                                  <h4 class="form-section"><i class="ft-home"></i>Données de base du produit</h4>
                                   <div class="row">
                                       <div class="col-md-6">
                                           <div class="form-group">
-                                              <label for="projectinput1"> Total price
+                                              <label for="projectinput1"> Total prix
                                               </label>
                                               <input type="number" id="total_price"
                                                      class="form-control"
@@ -59,7 +59,7 @@
 
                                       <div class="col-md-6">
                                           <div class="form-group">
-                                              <label for="projectinput1"> Square meter Price
+                                              <label for="projectinput1"> Mètre carré
                                               </label>
                                               <input type="number"
                                                      class="form-control"
@@ -81,10 +81,10 @@
                               <div class="form-actions">
                                   <button type="button" class="btn btn-warning mr-1"
                                           onclick="history.back();">
-                                      <i class="ft-x"></i> Back
+                                      <i class="ft-x"></i> Retour
                                   </button>
                                   <button type="submit" class="btn btn-primary">
-                                      <i class="la la-check-square-o"></i> Submit
+                                      <i class="la la-check-square-o"></i> Soumettre
                                   </button>
                               </div>
                           </form>

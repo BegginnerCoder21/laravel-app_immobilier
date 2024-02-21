@@ -31,7 +31,7 @@
 
 								<div class="x_content">
 									<br />
-									<form class="form" action="" method="POST"
+									<form class="form" action="{{ route('admin.properties.features.store',$property->id) }}" method="POST"
                           enctype="multipart/form-data">
                           @csrf
 
@@ -44,7 +44,7 @@
                                       <div class="row">
                                         <div class="col-md-6">
                                           <div class="form-group">
-                                              <label for="projectinput1"> Area </label>
+                                              <label for="projectinput1"> Zone </label>
                                               <input type="number" id="area"
                                                      class="form-control"
                                                      placeholder="  "
@@ -57,7 +57,7 @@
                                       </div>
                                       <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="projectinput1"> Rooms
+                                            <label for="projectinput1"> Chambres
                                             </label>
                                             <input type="number" id="rooms"
                                                    class="form-control"
@@ -73,7 +73,7 @@
                                     
                         <div class="col-md-6">
                           <div class="form-group">
-                              <label for="projectinput1"> Bedrooms
+                              <label for="projectinput1"> Chambres à coucher
                               </label>
                               <input type="number" id="bedrooms"
                                      class="form-control"
@@ -88,7 +88,7 @@
 
                         <div class="col-md-6">
                           <div class="form-group">
-                              <label for="projectinput1"> Bathrooms
+                              <label for="projectinput1"> Salles de bains
                               </label>
                               <input type="number" id="bathrooms"
                                     class="form-control"
@@ -102,12 +102,12 @@
                         </div>
 
                                     </div>
-                                    <h4 class="form-section"><i class="ft-navigation-2"></i> Tags Info</h4>
+                                    <h4 class="form-section"><i class="ft-navigation-2"></i> info sur l'etiquette</h4>
                                     <div class="row">
                                       <div class="col-lg-3">
                                       <div class="checkbox">
                                         <label>
-                                          <input type="checkbox" name="air_condition" value="1" class="flat" > <span>Air  Conditioning</span>
+                                          <input type="checkbox" name="air_condition" value="1" class="flat" > <span>Climatisation</span>
                                         </label>
                                         @error("air_condition")
                                         <span class="text-danger">message erreur</span>
@@ -118,7 +118,7 @@
                                       <div class="col-lg-3">
                                         <div class="checkbox">
                                           <label>
-                                            <input type="checkbox" name="swimming_pool" value="1" class="flat"  > <span>Swimming Pool</span>
+                                            <input type="checkbox" name="swimming_pool" value="1" class="flat"  > <span>Piscine</span>
                                           </label>
                                         </div>
                                         @error("swimming_pool")
@@ -129,7 +129,7 @@
                                       <div class="col-lg-3">
                                         <div class="checkbox">
                                           <label>
-                                            <input type="checkbox" name="central_heating" value="1" class="flat"  > <span>Central Heating</span>
+                                            <input type="checkbox" name="central_heating" value="1" class="flat"  > <span>Chauffage central</span>
                                           </label>
                                         </div>
                                         @error("central_heating")
@@ -139,7 +139,7 @@
                                       <div class="col-lg-3">
                                         <div class="checkbox">
                                           <label>
-                                            <input type="checkbox" name="laundry_room" value="1" class="flat"  > <span>Laundry Room</span>
+                                            <input type="checkbox" name="laundry_room" value="1" class="flat"  > <span>Buanderie</span>
                                           </label>
                                         </div>
                                         @error("laundry_room")
@@ -149,7 +149,7 @@
                                       <div class="col-lg-3">
                                         <div class="checkbox">
                                           <label>
-                                            <input type="checkbox" name="gym" value="1" class="flat"  > <span>Gym</span>
+                                            <input type="checkbox" name="gym" value="1" class="flat"  > <span>Gymnastique</span>
                                           </label>
                                         </div>
                                         @error("gym")
@@ -159,7 +159,7 @@
                                       <div class="col-lg-3">
                                         <div class="checkbox">
                                           <label>
-                                            <input type="checkbox" name="alarm" value="1" class="flat"  > <span>Alarm</span>
+                                            <input type="checkbox" name="alarm" value="1" class="flat"  > <span>Alarme</span>
                                           </label>
                                         </div>
                                         @error("alarm")
@@ -169,7 +169,7 @@
                                       <div class="col-lg-3">
                                         <div class="checkbox">
                                           <label>
-                                            <input type="checkbox" name="window_covering" value="1" class="flat"  > <span>Window Covering</span>
+                                            <input type="checkbox" name="window_covering" value="1" class="flat"  > <span>Couverture de fenêtre</span>
                                           </label>
                                         </div>
                                         @error("window_covering")
