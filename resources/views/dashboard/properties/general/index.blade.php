@@ -63,7 +63,7 @@
                                                 <a href="{{ route('admin.properties.price',$property ->id) }}"
                                                    class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">Prix</a>
 
-                                                <a href=""
+                                                <a href="{{ route('admin.properties.images', $property ->id) }}"
                                                    class="btn btn-outline-info btn-min-width box-shadow-3 mr-1 mb-1">Photos</a>
 
                                                    <a href="{{ route('admin.properties.features',$property ->id) }}"

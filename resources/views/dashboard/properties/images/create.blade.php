@@ -28,12 +28,12 @@
 									<div class="clearfix"></div>
 								</div>
            
-								<form class="form" action="}"
+								<form class="form" action="{{ route('admin.properties.images.store.db',$id) }}"
                                 method="POST"
                                 enctype="multipart/form-data">
                               @csrf
      
-                              <input type="hidden" name="property_id" value="{{$id}}">
+                              
                                   <div  class="dropzone" id="dpz-multiple-files">
                                       <div class="dz-message">Drop Files Here To Upload</div>
                                   </div>
@@ -42,16 +42,15 @@
                               <div class="form">
                                   <button type="button" class="btn btn-warning mr-1"
                                           onclick="history.back();">
-                                      <i class="ft-x"></i> Back
+                                      <i class="ft-x"></i> Retour
                                   </button>
                                   <button type="submit" class="btn btn-primary">
-                                      <i class="la la-check-square-o"></i> Submit
+                                      <i class="la la-check-square-o"></i> Soumettre
                                   </button>
                               </div>
 
                    </form>
 
-                          
 								</div>
 							</div>
 						</div>
@@ -69,21 +68,21 @@
 <script>
     var uploadedDocumentMap = {}
     Dropzone.options.dpzMultipleFiles = {
-      paramName:"dzfile",//the name that will be used to transfer  the file
+      paramName:"Namefiles",//the name that will be used to transfer  the file
       maxFilesize: 5, // MB
       clickable:true,
       addRemoveLinks: true,
       acceptedFiles:'image/*',
-      dictFallbackMessage:"Your browser does not supported",
-      dictInvalidFileType:"This type of file cannot be uploaded",
-      dictCancelUpload:"Cancel",
-      dictCancelUploadConfirmation:"Are you sure to cancel?",
-      dictRemoveFile:"Remove File",
-      dictMaxFileExceeded:"You exceeded the maximum number of files",
+      dictFallbackMessage:"Votre navigateur ne supporte pas",
+      dictInvalidFileType:"Ce type de fichier ne peut pas être téléchargé",
+      dictCancelUpload:"Annuler",
+      dictCancelUploadConfirmation:"Êtes-vous sûr d'annuler ?",
+      dictRemoveFile:"Supprimer le fichier",
+      dictMaxFileExceeded:"Vous avez dépassé le nombre maximum de fichiers",
       headers: {
         'X-CSRF-TOKEN': "{{ csrf_token() }}"
       },
-      url:"",
+      url:"{{ route('admin.properties.images.store') }}",
   
       success: function (file, response) {
         $('form').append('<input type="hidden" name="document[]" value="' + response.name + '">')

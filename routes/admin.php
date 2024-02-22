@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\MainCategoryController;
 use App\Http\Controllers\Admin\Property\MainPropertyController;
 use App\Http\Controllers\Admin\Property\PropertyFeatureController;
+use App\Http\Controllers\Admin\Property\PropertyImageController;
 use App\Http\Controllers\Admin\Property\PropertyPriceController;
 use App\Http\Controllers\Admin\StoreCategoryController;
 use App\Http\Controllers\Admin\UpdateCategoryController;
@@ -75,9 +76,6 @@ Route::group(
                     Route::post('update/{id}', 'update')->name('admin.properties.update');
                     Route::get('delete/{id}', 'delete')->name('admin.properties.delete');
                     
-                    Route::get('image/{id}', 'addImages')->name('admin.properties.images');
-                    Route::post('image', 'savePropertyImages')->name('admin.properties.images.store');
-                    Route::post('image/db', 'savePropertyImagesDB')->name('admin.properties.images.store.db');
                 });
                 
                 Route::controller(PropertyPriceController::class)->group(function(){
@@ -89,6 +87,14 @@ Route::group(
                 Route::controller(PropertyFeatureController::class)->group(function(){
                     Route::get('feature/{id}', 'getFeature')->name('admin.properties.features');
                     Route::post('feature/{id}', 'savePropertyFeature')->name('admin.properties.features.store');
+                });
+                
+                Route::controller(PropertyImageController::class)->group(function(){
+                    
+                    Route::get('image/{id}', 'addImages')->name('admin.properties.images');
+                    Route::post('image', 'savePropertyImages')->name('admin.properties.images.store');
+                    Route::post('image/db/{id}', 'savePropertyImagesDB')->name('admin.properties.images.store.db');
+
                 });
             });
         });
