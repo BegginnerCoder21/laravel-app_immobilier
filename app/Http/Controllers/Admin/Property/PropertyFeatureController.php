@@ -22,6 +22,6 @@ class PropertyFeatureController extends Controller
 
         $property->update($request->except('_token'));
 
-        return redirect()->route('admin.properties')->with(['success' => "mise a jour effectuée"]);
+        return redirect()->route('admin.properties.index')->with(['success' => "mise a jour effectuée"]);
     }
 }

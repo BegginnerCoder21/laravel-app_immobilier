@@ -34,6 +34,6 @@ class MainPropertyController extends Controller
             ...$request->validated()
         ]);
 
-        return redirect()->route('admin.properties')->with(["success" => "La propriété a bien été crée"]);
+        return redirect()->route('admin.properties.index')->with(["success" => "La propriété a bien été crée"]);
     }
 }

@@ -59,7 +59,7 @@
         <li>
           <a><i class="fa fa-home"></i>{{ __('admin/sidebar.properties') }}<span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
-                    <li><a href="{{ route('admin.properties') }}">{{ __('admin/sidebar.all properties') }}</a></li>
+                    <li><a href="{{ route('admin.properties.index') }}">{{ __('admin/sidebar.all properties') }}</a></li>
                     <li><a href="{{ route('admin.properties.general.create') }}">{{ __('admin/sidebar.add new property') }}</a></li>
                 </ul>
         </li>

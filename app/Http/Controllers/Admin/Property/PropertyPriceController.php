@@ -22,6 +22,6 @@ class PropertyPriceController extends Controller
 
         $property->update($request->validated());
 
-        return redirect()->route('admin.properties')->with(['success' => "mise a jour effectuée"]);
+        return redirect()->route('admin.properties.index')->with(['success' => "mise a jour effectuée"]);
     }
 }

@@ -35,7 +35,7 @@
      
                               
                                   <div  class="dropzone" id="dpz-multiple-files">
-                                      <div class="dz-message">Drop Files Here To Upload</div>
+                                      <div class="dz-message">Déposer les fichiers ici pour les télécharger</div>
                                   </div>
                                
                       <br><br>
