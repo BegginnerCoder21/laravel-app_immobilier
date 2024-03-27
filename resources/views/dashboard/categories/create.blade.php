@@ -146,7 +146,7 @@
 										<div class="ln_solid"></div>
 										<div class="item form-group">
 											<div class="col-md-6 col-sm-6 offset-md-3">
-                                                <a class="btn btn-primary" href="{{route('admin.categories')}}">Annuler</a>
+												<button type="button" onclick="history.back();" class="btn btn-primary">Annuler</button>
 												<button type="submit" class="btn btn-success">Soumettre</button>
 											</div>
 										</div>

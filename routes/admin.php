@@ -75,11 +75,11 @@ Route::group(
                     Route::get('edit/{id}', 'edit')->name('admin.properties.edit');
                     Route::post('update/{id}', 'update')->name('admin.properties.update');
                     Route::get('delete/{id}', 'delete')->name('admin.properties.delete');
-                    
+
                 });
-                
+
                 Route::controller(PropertyPriceController::class)->group(function(){
-                    
+
                     Route::get('price/{id}', 'getPrice')->name('admin.properties.price');
                     Route::post('price/{id}', 'savePropertyPrice')->name('admin.properties.price.store');
                 });
@@ -88,16 +88,22 @@ Route::group(
                     Route::get('feature/{id}', 'getFeature')->name('admin.properties.features');
                     Route::post('feature/{id}', 'savePropertyFeature')->name('admin.properties.features.store');
                 });
-                
+
                 Route::controller(PropertyImageController::class)->group(function(){
-                    
+
                     Route::get('image/{id}', 'addImages')->name('admin.properties.images');
                     Route::post('image', 'savePropertyImages')->name('admin.properties.images.store');
                     Route::post('image/db/{id}', 'savePropertyImagesDB')->name('admin.properties.images.store.db');
 
                 });
             });
+
+            Route::prefix('sliders')->group(function(){
+
+                Route::get('/',[\App\Http\Controllers\Admin\Slider\SliderController::class,'index'])->name('create.slider');
+            });
         });
+
 
         Route::prefix('admin')->middleware('guest:admin')->group(function () {
 

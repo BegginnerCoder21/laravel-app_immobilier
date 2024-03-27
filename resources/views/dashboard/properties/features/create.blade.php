@@ -198,7 +198,7 @@
                                                     
                                               <div class="item form-group">
                                               <div class="col-md-6 col-sm-6 offset-md-3">
-                                                <button class="btn btn-primary" type="button" >Annuler</button>
+                                                <button class="btn btn-primary" onclick="history.back();" type="button" >Annuler</button>
                                                 <button type="submit" class="btn btn-success">Soumettre</button>
                                               </div>
                                               </div>

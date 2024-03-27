@@ -31,7 +31,7 @@
 								<form class="form" action="{{ route('admin.properties.images.store.db',$id) }}"
                                 method="POST"
                                 enctype="multipart/form-data">
-                              @csrf
+                                @csrf
      
                               
                                   <div  class="dropzone" id="dpz-multiple-files">

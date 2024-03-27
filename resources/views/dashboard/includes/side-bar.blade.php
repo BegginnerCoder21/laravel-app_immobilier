@@ -71,7 +71,7 @@
           <a><i class="fa fa-user"></i>{{ __('admin/sidebar.sliders') }}<span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
 
-                    <li><a href="">{{ __('admin/sidebar.create new slider') }}</a></li>
+                    <li><a href="{{ route('create.slider') }}">{{ __('admin/sidebar.create new slider') }}</a></li>
 
                 </ul>
         </li>

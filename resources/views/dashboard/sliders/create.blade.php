@@ -1,4 +1,4 @@
-		
+
 @extends('layouts.dashboard.admin')
 @section('content')
 
@@ -10,60 +10,60 @@
 							<h3>Sliders</h3>
 						</div>
 
-					
+
 					</div>
 					<div class="clearfix"></div>
 					<div class="row">
 						<div class="col-md-12 col-sm-12 ">
 							<div class="x_panel">
 								<div class="x_title">
-									<h2>Create<small>Sliders</small></h2>
+									<h2>Créer<small>Sliders</small></h2>
 									<ul class="nav navbar-right panel_toolbox">
 										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 										</li>
-							
+
 										<li><a class="close-link"><i class="fa fa-close"></i></a>
 										</li>
 									</ul>
 									<div class="clearfix"></div>
 								</div>
-           
+
 								<form class="form" action=""
                                 method="POST"
                                 enctype="multipart/form-data">
                               @csrf
-     
+
                                   <div  class="dropzone" id="dpz-multiple-files">
-                                      <div class="dz-message">Drop Files Here To Upload</div>
+                                      <div class="dz-message">Déposer les fichiers ici pour les télécharger</div>
                                   </div>
-                               
+
                       <br><br>
                               <div class="form">
                                   <button type="button" class="btn btn-warning mr-1"
                                           onclick="history.back();">
-                                      <i class="ft-x"></i> Back
+                                      <i class="ft-x"></i> Retour
                                   </button>
                                   <button type="submit" class="btn btn-primary">
-                                      <i class="la la-check-square-o"></i> Submit
+                                      <i class="la la-check-square-o"></i> Soumettre
                                   </button>
                               </div>
 
                    </form>
 
-                          
+
 								</div>
 
                 <section id="basic-form-layouts">
                   <div class="row match-height">
                       <div class="col-md-12">
                           <div class="card">
-    
+
                   {{-- ///////////////// --}}
             <div class="card-content collapse show">
               <div class="card-body">
                   <div class="card-text">
-                      
-                      <h4 class="card-title" id="basic-layout-form">current sliders</h4>
+
+                      <h4 class="card-title" id="basic-layout-form">sliders courant</h4>
                   </div>
               </div>
                   <div class="card-body  my-gallery" itemscope="" itemtype="http://schema.org/ImageGallery"data-pswp-uid="1">
@@ -80,7 +80,7 @@
                                       </a>
                                   </figure>
                               @empty
-                              There are no sliders at the moment
+                              Il n'y a pas de curseurs pour le moment
                               @endforelse
                           @endisset
                       </div>
@@ -101,13 +101,13 @@
 @stop
 
 @section('script')
-    
+
 
 {{-- session image javascript dropzone  --}}
 <script>
     var uploadedDocumentMap = {}
     Dropzone.options.dpzMultipleFiles = {
-      paramName:"dzfile",//the name that will be used to transfer  the file
+      paramName:"file_image",//the name that will be used to transfer  the file
       maxFilesize: 5, // MB
       clickable:true,
       addRemoveLinks: true,
@@ -122,12 +122,12 @@
         'X-CSRF-TOKEN': "{{ csrf_token() }}"
       },
       url:"",
-  
+
       success: function (file, response) {
         $('form').append('<input type="hidden" name="document[]" value="' + response.name + '">')
         uploadedDocumentMap[file.name] = response.name
       },
-  
+
       removedfile: function (file) {
         file.previewElement.remove()
         var name = ''
