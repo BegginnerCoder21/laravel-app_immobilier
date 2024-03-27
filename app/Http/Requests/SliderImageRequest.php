@@ -22,7 +22,7 @@ class SliderImageRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'document' => ['required','array'],
+            'document' => ['required','array','min:1'],
             'document.*' => ['required','string']
         ];
     }

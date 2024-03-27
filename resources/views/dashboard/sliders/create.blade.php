@@ -28,7 +28,7 @@
 									<div class="clearfix"></div>
 								</div>
 
-								<form class="form" action=""
+								<form class="form" action="{{ route('slider.image.db') }}"
                                 method="POST"
                                 enctype="multipart/form-data">
                               @csrf
@@ -72,10 +72,10 @@
                               @forelse($images as $image )
                                   <figure class="col-lg-3 col-md-6 col-12" itemprop="associatedMedia" itemscope=""
                                           itemtype="http://schema.org/ImageObject">
-                                      <a href="{{$image -> photo}}" itemprop="contentUrl"
+                                      <a href="{{ $image->photo }}" itemprop="contentUrl"
                                         data-size="480x360">
                                           <img class="img-thumbnail img-fluid"
-                                              src="{{$image -> photo}}"
+                                              src="{{ $image->photo }}"
                                               itemprop="thumbnail" alt="Image description">
                                       </a>
                                   </figure>

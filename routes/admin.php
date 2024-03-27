@@ -100,8 +100,12 @@ Route::group(
 
             Route::prefix('sliders')->group(function(){
 
-                Route::get('/',[\App\Http\Controllers\Admin\Slider\SliderController::class,'index'])->name('create.slider');
-                Route::post('image',[\App\Http\Controllers\Admin\Slider\SliderController::class,'saveSliderImages'])->name('slider.image');
+                Route::controller(\App\Http\Controllers\Admin\Slider\SliderController::class)->group(function(){
+                    Route::get('/','index')->name('create.slider');
+                    Route::post('image','saveSliderImages')->name('slider.image');
+                    Route::post('image/db','saveSliderImagesDB')->name('slider.image.db');
+
+                });
             });
         });
 

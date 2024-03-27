@@ -10,10 +10,11 @@ use Illuminate\Http\Request;
 class SliderController extends Controller
 {
 
-    public function index(){
+    public function index()
+    {
 
         $images = Slider::get('photo');
-        return view('dashboard.sliders.create',compact('images'));
+        return view('dashboard.sliders.create', compact('images'));
     }
 
     public function saveSliderImages(Request $request)
@@ -25,5 +26,25 @@ class SliderController extends Controller
             'name' => $filename,
             'original_name' => $file->getClientOriginalName()
         ]);
+    }
+
+    public function saveSliderImagesDB(SliderImageRequest $request)
+    {
+
+        try {
+            if ($request->has('document')) {
+
+                foreach ($request->document as $image) {
+
+                       Slider::create([
+                        'photo' => $image
+                    ]);
+                }
+                return redirect()->back()->with(['success' => "Image ajouté au slider."]);
+            }   
+        } catch (\Exception $err) {
+
+            return redirect()->back()->with(['error' => "Quelque chose s'est mal passé."]);
+        }
     }
 }
