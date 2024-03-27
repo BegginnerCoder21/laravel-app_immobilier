@@ -107,21 +107,21 @@
 <script>
     var uploadedDocumentMap = {}
     Dropzone.options.dpzMultipleFiles = {
-      paramName:"file_image",//the name that will be used to transfer  the file
+      paramName:"Namefiles",//the name that will be used to transfer  the file
       maxFilesize: 5, // MB
       clickable:true,
       addRemoveLinks: true,
       acceptedFiles:'image/*',
-      dictFallbackMessage:"Your browser does not supported",
-      dictInvalidFileType:"This type of file cannot be uploaded",
-      dictCancelUpload:"Cancel",
-      dictCancelUploadConfirmation:"Are you sure to cancel?",
-      dictRemoveFile:"Remove File",
-      dictMaxFileExceeded:"You exceeded the maximum number of files",
+      dictFallbackMessage:"Votre navigateur ne supporte pas",
+      dictInvalidFileType:"Ce type de fichier ne peut pas être téléchargé",
+      dictCancelUpload:"Annuler",
+      dictCancelUploadConfirmation:"Êtes-vous sûr d'annuler ?",
+      dictRemoveFile:"Supprimer le fichier",
+      dictMaxFileExceeded:"Vous avez dépassé le nombre maximum de fichiers",
       headers: {
         'X-CSRF-TOKEN': "{{ csrf_token() }}"
       },
-      url:"",
+      url:"{{ route('slider.image') }}",
 
       success: function (file, response) {
         $('form').append('<input type="hidden" name="document[]" value="' + response.name + '">')

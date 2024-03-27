@@ -44,6 +44,7 @@ return [
             'throw' => false,
         ],
 
+
         'properties' => [
             'driver' => 'local',
             'root' => storage_path('app/public/properties/images'),
@@ -51,7 +52,13 @@ return [
             'visibility' => 'public',
             'throw' => false,
         ],
-
+        'sliders' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/sliders/images'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),
